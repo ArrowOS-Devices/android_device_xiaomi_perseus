@@ -1,5 +1,10 @@
 [
   {
+    "repository": "android_kernel_xiaomi_sdm845",
+    "target_path": "kernel/xiaomi/sdm845",
+    "branch": "arrow-10.0-perseus"
+  },
+  {
     "repository": "android_device_xiaomi_sdm845-common",
     "target_path": "device/xiaomi/sdm845-common"
   }
