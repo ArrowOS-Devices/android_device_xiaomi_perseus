@@ -15,6 +15,7 @@ PRODUCT_DEVICE := perseus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi MIX 3
 PRODUCT_MANUFACTURER := Xiaomi
+DEVICE_MAINTAINER := joelh
 
 BUILD_FINGERPRINT := "Xiaomi/perseus/perseus:10/QKQ1.190828.002/V11.0.3.0.QEEMIXM:user/release-keys"
 
