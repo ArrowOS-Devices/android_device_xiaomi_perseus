@@ -9,6 +9,8 @@ $(call inherit-product, device/xiaomi/perseus/device.mk)
 # Inherit some common Arrow stuff.
 $(call inherit-product, vendor/arrow/config/common.mk)
 
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := arrow_perseus
 PRODUCT_DEVICE := perseus
