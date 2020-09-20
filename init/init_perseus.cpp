@@ -48,16 +48,18 @@ void property_override(char const prop[], char const value[])
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void property_override_dual(char const system_prop[], char const vendor_prop[],
-    char const value[])
+void property_override_triple(char const system_prop[], char const vendor_prop[], char const bootimg_prop[], char const value[])
 {
     property_override(system_prop, value);
     property_override(vendor_prop, value);
+    property_override(bootimg_prop, value);
 }
 
 void vendor_load_properties()
 {
-    // fingerprint
+    // Safetynet Workaround
+    property_override("ro.boot.verifiedbootstate", "green");
     property_override("ro.build.description", "polaris-user 8.0.0 OPR1.170623.032 V9.5.19.0.ODGMIFA release-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "Xiaomi/polaris/polaris:8.0.0/OPR1.170623.032/V9.5.19.0.ODGMIFA:user/release-keys");
+    property_override_triple("ro.build.fingerprint", "ro.vendor.build.fingerprint", "ro.bootimage.build.fingerprint", "Xiaomi/polaris/polaris:8.0.0/OPR1.170623.032/V9.5.19.0.ODGMIFA:user/release-keys");
+    property_override("ro.system.build.fingerprint", "Xiaomi/polaris/polaris:8.0.0/OPR1.170623.032/V9.5.19.0.ODGMIFA:user/release-keys");
 }
