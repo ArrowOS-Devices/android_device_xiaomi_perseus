@@ -8,3 +8,8 @@ persist.camera.saf.stablecnt=3
 
 # Display
 ro.surface_flinger.has_wide_color_display=true
+
+# Modem SAR backoff properties
+persist.radio.sar_sar_sensor=true
+persist.radio.sar_headhand_sensor=false
+persist.radio.sar_slidemode_sensor=true
